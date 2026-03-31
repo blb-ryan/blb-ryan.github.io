@@ -3,35 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magada Family Game Night</title>
+  <title>Beast Games</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: -apple-system, 'SF Pro Display', system-ui, sans-serif;
-      background: #111;
-      color: #fff;
+      background: #0a0e08;
+      color: #e8e4d9;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 3rem 1.25rem;
+      padding: 2.5rem 1.25rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Subtle forest fog at bottom */
+    body::after {
+      content: '';
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to top, rgba(10, 14, 8, 0.95), transparent);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
     }
 
     h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
+      font-family: 'Russo One', sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       margin-bottom: 0.25rem;
       text-align: center;
+      color: #c8b560;
+      text-shadow: 0 0 20px rgba(200, 181, 96, 0.15);
     }
 
     .subtitle {
-      color: #666;
+      color: #5a6350;
       margin-bottom: 2.5rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 400;
       text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     .games {
@@ -43,13 +71,13 @@
     }
 
     .game-card {
-      background: #1a1a1a;
-      border: 1px solid #222;
+      background: linear-gradient(135deg, #141a10, #181e14);
+      border: 1px solid #2a3322;
       border-radius: 14px;
       padding: 1.1rem 1.25rem;
       text-decoration: none;
       color: inherit;
-      transition: background 0.2s, border-color 0.2s;
+      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -57,12 +85,13 @@
     }
 
     .game-card:hover {
-      background: #222;
-      border-color: #333;
+      background: linear-gradient(135deg, #1a2216, #1e2618);
+      border-color: #3d4a30;
+      box-shadow: 0 4px 20px rgba(200, 181, 96, 0.06);
     }
 
     .game-card:active {
-      background: #252525;
+      background: #1e2618;
     }
 
     .game-card .emoji {
@@ -83,33 +112,43 @@
       font-size: 1.05rem;
       font-weight: 600;
       letter-spacing: -0.01em;
+      color: #d4cdb5;
     }
 
     .game-card .desc {
       font-size: 0.8rem;
-      color: #666;
+      color: #5a6350;
       line-height: 1.35;
     }
 
     .game-card .arrow {
       margin-left: auto;
-      color: #444;
+      color: #3d4a30;
       font-size: 1.1rem;
       flex-shrink: 0;
     }
 
+    .footprint {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      opacity: 0.15;
+      letter-spacing: 0.5rem;
+    }
+
     footer {
       margin-top: auto;
-      padding-top: 3rem;
-      color: #333;
-      font-size: 0.75rem;
+      padding-top: 2rem;
+      color: #2a3322;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
     }
   </style>
 </head>
 <body>
 
-  <h1>Family Game Night</h1>
-  <p class="subtitle">Pick a game and let's play</p>
+  <div class="logo">🦶</div>
+  <h1>Beast Games</h1>
+  <p class="subtitle">Enter the wilderness</p>
 
   <div class="games">
 
@@ -138,7 +177,9 @@
 
   </div>
 
-  <footer>&copy; 2026 Magada Family Games</footer>
+  <div class="footprint">🐾 🐾 🐾</div>
+
+  <footer>Beast Games &copy; 2026</footer>
 
 </body>
 </html>
